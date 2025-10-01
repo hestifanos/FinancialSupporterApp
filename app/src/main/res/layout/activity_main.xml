@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/Tenure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="50dp"
+        android:autofillHints=""
+        android:hint="@string/tenure"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColorHint="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Rate"
+        tools:text="Tenure"
+        tools:ignore="TextViewEdits" />
+
+    <EditText
+        android:id="@+id/EMI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="100dp"
+        android:autofillHints=""
+
+        android:text="@string/emi"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/LoanAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:autofillHints=""
+        android:hint="@string/loan"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColorHint="@color/black"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="@+id/Rate"
+        app:layout_constraintTop_toBottomOf="@+id/EMI"
+        tools:text="LoanAmount"
+        tools:ignore="TextViewEdits" />
+
+    <EditText
+        android:id="@+id/Rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:autofillHints=""
+        android:hint="@string/rate"
+        android:inputType="numberDecimal"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColorHint="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/Tenure"
+        app:layout_constraintTop_toBottomOf="@+id/LoanAmount"
+        tools:text="Rate"
+        tools:ignore="TextViewEdits" />
+
+    <Button
+        android:id="@+id/EMICal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="100dp"
+        android:text="@string/button"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Tenure" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

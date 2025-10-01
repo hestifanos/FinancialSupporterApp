@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Finaport</string>
+    <string name="monthlyincome">MonthlyIncome</string>
+    <string name="expense">Expense</string>
+    <string name="submit">Submit</string>
+    <string name="textview">TextView</string>
+    <string name="rate">Rate</string>
+    <string name="button">Button</string>
+    <string name="emi">EMI</string>
+    <string name="tenure">Tenure</string>
+    <string name="loan">Loan</string>
+</resources>
