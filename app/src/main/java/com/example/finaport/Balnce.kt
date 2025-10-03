@@ -99,14 +99,14 @@ class Balnce : AppCompatActivity() {
             {
 
                 resultTextView.text = String.format(
-                    "Unrecommended loan amount. \nMonthly Balance: %.2f",
+                    "Infeasible loan amount. \nMonthly Balance: %.2f",
                     finalBalance)
                 // Set the text color to red to indicate a negative or unrecommended result.
                 resultTextView.setTextColor(Color.RED)
             }
             else
             {
-                resultTextView.text = String.format("Recommended loan amount. \nMonthly Balance: %.2f", finalBalance)
+                resultTextView.text = String.format("Feasible loan amount. \nMonthly Balance: %.2f", finalBalance)
                 // Set the text color to a dark green to indicate a positive or recommended result.
                 resultTextView.setTextColor(Color.parseColor("#2E7D32"))
             }
