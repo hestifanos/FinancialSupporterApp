@@ -9,4 +9,7 @@
     <string name="emi">EMI</string>
     <string name="tenure">Tenure</string>
     <string name="loan">Loan</string>
+    <string name="decorative_image_desc">image</string>
+    <string name="back">Back</string>
+    <string name="submitAll">Submit</string>
 </resources>

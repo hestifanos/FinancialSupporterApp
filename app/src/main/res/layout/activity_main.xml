@@ -5,52 +5,67 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="24dp"
     android:visibility="visible"
+    android:background="#D2B48C"
     tools:context=".MainActivity">
 
     <EditText
         android:id="@+id/Tenure"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginStart="12dp"
         android:autofillHints=""
+        android:background="@android:drawable/edit_text"
         android:hint="@string/tenure"
         android:inputType="numberDecimal"
-        android:minHeight="48dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColorHint="@color/black"
+        android:minHeight="56dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textAppearance="@android:style/TextAppearance.Medium"
+        android:textColorHint="@android:color/darker_gray"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Rate"
         tools:text="Tenure"
         tools:ignore="TextViewEdits" />
 
-    <EditText
+    <TextView
         android:id="@+id/EMI"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="100dp"
         android:autofillHints=""
 
+        android:backgroundTint="#FF9800"
+        android:minWidth="48dp"
         android:text="@string/emi"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textAppearance="@android:style/TextAppearance.Large"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/LoanAmount"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginStart="0dp"
         android:autofillHints=""
+        android:background="@android:drawable/edit_text"
         android:hint="@string/loan"
         android:inputType="numberDecimal"
-        android:minHeight="48dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColorHint="@color/black"
+        android:minHeight="56dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textAppearance="@android:style/TextAppearance.Medium"
+        android:textColorHint="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
         android:visibility="visible"
         app:layout_constraintStart_toStartOf="@+id/Rate"
         app:layout_constraintTop_toBottomOf="@+id/EMI"
@@ -59,32 +74,95 @@
 
     <EditText
         android:id="@+id/Rate"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginStart="12dp"
         android:autofillHints=""
+        android:background="@android:drawable/edit_text"
         android:hint="@string/rate"
         android:inputType="numberDecimal"
-        android:minWidth="48dp"
-        android:minHeight="48dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColorHint="@color/black"
-        app:layout_constraintStart_toStartOf="@+id/Tenure"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:minHeight="56dp"
+        android:textAppearance="@android:style/TextAppearance.Medium"
+        android:textColorHint="@android:color/darker_gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/LoanAmount"
         tools:text="Rate"
         tools:ignore="TextViewEdits" />
 
+
     <Button
         android:id="@+id/EMICal"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="100dp"
-        android:text="@string/button"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
+        android:minHeight="60dp"
+        android:text="Continue To Calculate Balance"
+        app:backgroundTint="#424242"
+        android:textAppearance="@android:style/TextAppearance.Widget.Button"
         app:layout_constraintEnd_toEndOf="parent"
+
+
         app:layout_constraintHorizontal_bias="0.75"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Tenure" />
+
+    <TextView
+        android:id="@+id/OnlyEMIInterResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:text=""
+        android:textAppearance="@android:style/TextAppearance.Medium"
+        android:textSize="20sp"
+        android:textStyle="bold"
+
+        android:textColor="@android:color/holo_blue_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EMICal"/>
+
+
+    <Button
+        android:id="@+id/EMIIterResul"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
+        android:minHeight="60dp"
+        android:text="Calculate The EMI"
+        app:backgroundTint="#424242"
+        android:textAppearance="@android:style/TextAppearance.Widget.Button"
+        app:layout_constraintEnd_toEndOf="parent"
+
+
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/OnlyEMIInterResult" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/test"
+        android:contentDescription="@string/decorative_image_desc"
+        android:scaleType="centerInside"
+        app:layout_constraintTop_toBottomOf="@+id/EMIIterResul"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
